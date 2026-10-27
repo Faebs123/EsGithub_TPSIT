@@ -1,2 +1,2 @@
-# EsGithub_TPSIT
-esercitazione di TPSIT per la presentazione di Github
+# LA NOSTRA ESERCITAZIONE
+###### PARTECIPANTI: Pellegrini Fabrizio, Sciascia Francesco, Angione Christian
