@@ -1,62 +1,126 @@
-<!-- 
-Commento da Pellegrini a Sciascia:
-inserisci i contatti e gli orari di apertura in due tabelle differenti;
-centra la mappa e le due tabelle nella pagina
--->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="it">
 	<head>
-	<meta charset="utf-8">
-	<title>Chi Siamo</title>
-	<link rel="stylesheet" href="./index.css">
+		<meta charset="utf-8">
+		<title>Chi Siamo</title>
+		<link rel="stylesheet" href="./index.css">
+		<style>
+			.center-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+
+			table {
+				border-collapse: collapse;
+				margin: 15px 0 25px 0;
+				width: 100%;
+				max-width: 500px;
+			}
+
+			th, td {
+				border: 1px solid #ccc;
+				padding: 10px;
+				text-align: center;
+			}
+
+			th {
+				background-color: #f4f4f4;
+			}
+
+			iframe {
+				border: 0;
+				margin-top: 10px;
+			}
+		</style>
 	</head>
 	<body>
-	<h1>Pizzeria Il Forno di Pietra</h1>
-	<p>Da oltre cinquant'anni portiamo in tavola la vera tradizione con amore e ingredienti a km zero.</p>
+		<h1>Pizzeria Il Forno di Pietra</h1>
+		<p>Da oltre cinquant'anni portiamo in tavola la vera tradizione con amore e ingredienti a km zero.</p>
 
-	<hr>
-	
-	<h2>La Nostra Storia</h2>
-	<p>
-		Nel cuore di un piccolo borgo affacciato sul mare, la pizzeria Il Forno di Pietra ha aperto le sue porte oltre cinquant'anni fa grazie alla passione di Mastro Matteo, un pizzaiolo che custodiva un segreto tramandato di generazione in generazione. La leggenda narra che l'impasto originale venisse fatto lievitare per ben quarantotto ore utilizzando una pasta madre speciale, custodita gelosamente in una giara di terracotta. Con il passare del tempo, quel piccolo locale dai tavoli in legno e dal profumo inconfondibile di basilico e legna bruciata è diventato un punto di riferimento per intere generazioni, capace di trasformare una semplice cena in un momento di autentica festa e tradizione.
-	</p>
-	  <h3>Perché sceglierci</h3>
-	  <ul>
-		<li><strong>Lievitazione 48h:</strong> Impasto ad altissima digeribilità, soffice e leggero.</li>
-		<li><strong>Ingredienti a Km 0:</strong> Farine selezionate, pomodoro 100% italiano e mozzarella fresca.</li>
-		<li><strong>Forno a Legna:</strong> Cottura tradizionale per il massimo del sapore e della croccantezza.</li>
-	  </ul>
+		<hr>
+		
+		<h2>La Nostra Storia</h2>
+		<p>
+			Nel cuore di un piccolo borgo affacciato sul mare, la pizzeria Il Forno di Pietra ha aperto le sue porte oltre cinquant'anni fa grazie alla passione di Mastro Matteo, un pizzaiolo che custodiva un segreto tramandato di generazione in generazione. La leggenda narra che l'impasto originale venisse fatto lievitare per ben quarantotto ore utilizzando una pasta madre speciale, custodita gelosamente in una giara di terracotta. Con il passare del tempo, quel piccolo locale dai tavoli in legno e dal profumo inconfondibile di basilico e legna bruciata è diventato un punto di riferimento per intere generazioni, capace di trasformare una semplice cena in un momento di autentica festa e tradizione.
+		</p>
 
-	  <hr>
-	  
-	  <h2>Dove Siamo e Contattaci</h2>
+		<h3>Perché sceglierci</h3>
+		<ul>
+			<li><strong>Lievitazione 48h:</strong> Impasto ad altissima digeribilità, soffice e leggero.</li>
+			<li><strong>Ingredienti a Km 0:</strong> Farine selezionate, pomodoro 100% italiano e mozzarella fresca.</li>
+			<li><strong>Forno a Legna:</strong> Cottura tradizionale per il massimo del sapore e della croccantezza.</li>
+		</ul>
 
-	  <h3>Indirizzo</h3>
-	  <p>Via della Tradizione 12, Roma (RM)</p>
+		<hr>
+		
+		<h2>Dove Siamo e Contattaci</h2>
+		<p>Via della Tradizione 12, Roma (RM)</p>
 
-	  <h3>Prenotazioni & Asporto</h3>
-	  <p>Telefono: <a href="tel:+39061234567">+39 06 123 4567</a></p>
-	  <p>WhatsApp: <a href="https://wa.me/39061234567">+39 06 123 4567</a></p>
-	  <p>Email: info@ilfornodipietra.it</p>
+		<div class="center-content">
+			<!-- Tabella Contatti -->
+			<h3>Prenotazioni &amp; Asporto</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Canale</th>
+						<th>Contatto</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Telefono</td>
+						<td><a href="tel:+39061234567">+39 06 123 4567</a></td>
+					</tr>
+					<tr>
+						<td>WhatsApp</td>
+						<td><a href="https://wa.me/39061234567">+39 06 123 4567</a></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><a href="mailto:info@ilfornodipietra.it">info@ilfornodipietra.it</a></td>
+					</tr>
+				</tbody>
+			</table>
 
-	  <h3>Orari di Apertura</h3>
-	  <p>Lunedì - Giovedì: 19:00 – 23:00</p>
-	  <p>Venerdì - Domenica: 19:00 – 24:00</p>
-	  <p><em>Giorno di chiusura: Martedì</em></p>
+			<!-- Tabella Orari -->
+			<h3>Orari di Apertura</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Giorni</th>
+						<th>Orario</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Lunedì - Giovedì</td>
+						<td>19:00 – 23:00</td>
+					</tr>
+					<tr>
+						<td>Venerdì - Domenica</td>
+						<td>19:00 – 24:00</td>
+					</tr>
+					<tr>
+						<td>Giorno di chiusura</td>
+						<td>Martedì</td>
+					</tr>
+				</tbody>
+			</table>
 
-	  <h3>Mappa</h3>
-	  <iframe 
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.886022833116!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f10dd4090b8480!2sColosseo!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit" 
-		width="600" 
-		height="450" 
-		loading="lazy">
-	  </iframe>
+			<!-- Mappa Centrata -->
+			<h3>Mappa</h3>
+			<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.886022833116!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f10dd4090b8480!2sColosseo!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit" 
+				width="600" 
+				height="450" 
+				loading="lazy">
+			</iframe>
+		</div>
 
-	  <hr>
+		<hr>
 
-	  <p>&copy; 2026 Pizzeria Il Forno di Pietra. Tutti i diritti riservati.</p>
-	
+		<p>&copy; 2026 Pizzeria Il Forno di Pietra. Tutti i diritti riservati.</p>
 	</body>
 </html>
