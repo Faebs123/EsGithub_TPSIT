@@ -1,330 +1,250 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Siamo | Pizzeria Il Forno di Pietra</title>
-    <style>
-        :root {
-    --primary-color: #d35400;
-    --dark-color: #2c3e50;
-    --light-color: #f9f9f9;
-    --accent-color: #e67e22;
-    --border-color: #e0e0e0;
-}
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Menù | Il Forno di Pietra</title>
+		<style>
+			:root {
+				--primary-color: #d35400;
+				--dark-color: #2c3e50;
+				--light-color: #f9f9f9;
+				--accent-color: #e67e22;
+			}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
 
-body {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    line-height: 1.6;
-}
+			body {
+				background-color: var(--light-color);
+				color: var(--dark-color);
+				line-height: 1.6;
+			}
 
-/* Header & Navbar */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+			header {
+				background-color: #fff;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+			}
 
-.navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+			.navbar {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+			}
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
+			.logo {
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: var(--primary-color);
+			}
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+			.nav-links {
+				list-style: none;
+				display: flex;
+				gap: 20px;
+			}
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--dark-color);
-    font-weight: 600;
-    transition: color 0.3s;
-}
+			.nav-links a {
+				text-decoration: none;
+				color: var(--dark-color);
+				font-weight: 600;
+				transition: color 0.3s;
+			}
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--primary-color);
-}
+			.nav-links a:hover {
+				color: var(--primary-color);
+			}
 
-/* Contenuto Principale */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+			.container {
+				max-width: 1200px;
+				margin: 40px auto;
+				padding: 0 20px;
+			}
 
-.page-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
+			.section-title {
+				text-align: center;
+				font-size: 2.2rem;
+				margin-bottom: 40px;
+				color: var(--dark-color);
+			}
 
-.subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
-}
+			.menu-table {
+				width: 100%;
+				border-collapse: collapse;
+				background: white;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+				margin-bottom: 60px;
+			}
 
-hr {
-    border: none;
-    height: 1px;
-    background-color: var(--border-color);
-    margin: 40px 0;
-}
+			.menu-table th, .menu-table td {
+				padding: 15px 20px;
+				text-align: left;
+				border-bottom: 1px solid #eee;
+			}
 
-/* Sezioni della pagina */
-.content-section {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-}
+			.menu-table th {
+				background-color: var(--primary-color);
+				color: white;
+				font-weight: 600;
+			}
 
-.content-section h2 {
-    font-size: 1.8rem;
-    color: var(--dark-color);
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--primary-color);
-    display: inline-block;
-    padding-bottom: 5px;
-}
+			.menu-table tr:hover {
+				background-color: #f1f1f1;
+			}
 
-.content-section h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    margin: 25px 0 15px 0;
-}
+			.menu-table img {
+				border-radius: 6px;
+				object-fit: cover;
+			}
 
-.content-section p {
-    color: #444;
-    margin-bottom: 15px;
-    text-align: justify;
-}
+			.menu-table ul {
+				list-style-type: disc;
+				margin-left: 20px;
+			}
 
-/* Liste */
-.content-section ul {
-    list-style: none;
-    padding-left: 0;
-}
+			.price {
+				font-weight: bold;
+				color: var(--accent-color);
+			}
 
-.content-section ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    position: relative;
-    padding-left: 25px;
-}
+			footer {
+				background-color: var(--dark-color);
+				color: white;
+				text-align: center;
+				padding: 40px 20px;
+			}
 
-.content-section ul li::before {
-    content: "✔";
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
+			footer p {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	
+	<body>
 
-.content-section ul li:last-child {
-    border-bottom: none;
-}
+		<header>
+			<nav class="navbar">
+				<div class="logo">🍕 Il Forno di Pietra</div>
+				<ul class="nav-links">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./menu.html">Menu</a></li>
+					<li><a href="./chisiamo.html">Chi Siamo</a></li>
+				</ul>
+			</nav>
+		</header>
 
-/* Tabelle & Mappa */
-.center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+		<div class="container">
+			<h1 class="section-title">Menù Forno di Pietra</h1>
+			<table class="menu-table">
+				<thead>
+					<tr>
+						<th>Pizza</th>
+						<th>Ingredienti</th>
+						<th>Prezzo</th>
+						<th>Immagine</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Margherita</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Basilico</li>
+							</ul>
+						</td>
+						<td><span class="price">5.00 €</span></td>
+						<td><img src="./imgs/Pizza margherita.PNG" alt="Immagine pizza margherita" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Diavola</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Salame piccante</li>
+							</ul>
+						</td>
+						<td><span class="price">6.50 €</span></td>
+						<td><img src="./imgs/Diavola.PNG" alt="Immagine pizza diavola" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Marinara</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Aglio</li>
+								<li>Origano</li>
+								<li>Olio d'oliva</li>
+							</ul>
+						</td>
+						<td><span class="price">4.50 €</span></td>
+						<td><img src="./imgs/Marinara.PNG" alt="Immagine pizza marinara" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Capricciosa</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Prosciutto cotto</li>
+								<li>Funghi</li>
+								<li>Carciofi</li>
+								<li>Olive</li>
+							</ul>
+						</td>
+						<td><span class="price">7.50 €</span></td>
+						<td><img src="./imgs/Capricciosa.PNG" alt="Immagine pizza capricciosa" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Quattro Formaggi</strong></td>
+						<td>
+							<ul>
+								<li>Mozzarella</li>
+								<li>Gorgonzola</li>
+								<li>Fontina</li>
+								<li>Parmigiano Reggiano</li>
+							</ul>
+						</td>
+						<td><span class="price">8.00 €</span></td>
+						<td><img src="./imgs/4 formaggi.PNG" alt="Immagine pizza quattro formaggi" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>La Forno di pietra</strong></td>
+						<td>
+							<ul>
+								<li>Salsa brace</li>
+								<li>Mozzarella</li>
+								<li>Pomodori secchi</li>
+								<li>Salsiccia</li>
+								<li>Basilico</li>
+							</ul>
+						</td>
+						<td><span class="price">8.50 €</span></td>
+						<td><img src="./imgs/La forno.PNG" alt="Immagine pizza La Forno di pietra" width="100"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-table {
-    width: 100%;
-    max-width: 600px;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-}
+		<footer id="contact">
+			<h3>Il Forno di Pietra</h3>
+			<p>📍 Via della Tradizione 12, Roma (RM) | 📞 Tel: +39 06 123 4567 </p>
+			<p>&copy; 2026 Il Forno di Pietra - Tutti i diritti riservati.</p>
+		</footer>
 
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-}
-
-th {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: 600;
-}
-
-tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-}
-
-td a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-td a:hover {
-    text-decoration: underline;
-}
-
-iframe {
-    width: 100%;
-    max-width: 800px;
-    border: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-footer {
-    background-color: var(--dark-color);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-    </style>
-</head>
-<body>
-
-    <header>
-        <nav class="navbar">
-            <div class="logo">🍕 Il Forno di Pietra</div>
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./chisiamo.html" class="active">Chi Siamo</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1 class="page-title">Pizzeria Il Forno di Pietra</h1>
-        <p class="subtitle">Da oltre cinquant'anni portiamo in tavola la vera tradizione con amore e ingredienti a km zero.</p>
-
-        <hr>
-
-        <section class="content-section">
-            <h2>La Nostra Storia</h2>
-            <p>
-                Nel cuore di un piccolo borgo affacciato sul mare, la pizzeria Il Forno di Pietra ha aperto le sue porte oltre cinquant'anni fa grazie alla passione di Mastro Matteo, un pizzaiolo che custodiva un segreto tramandato di generazione in generazione. La leggenda narra che l'impasto originale venisse fatto lievitare per ben quarantotto ore utilizzando una pasta madre speciale, custodita gelosamente in una giara di terracotta. Con il passare del tempo, quel piccolo locale dai tavoli in legno e dal profumo inconfondibile di basilico e legna bruciata è diventato un punto di riferimento per intere generazioni, capace di trasformare una semplice cena in un momento di autentica festa e tradizione.
-            </p>
-
-            <h3>Perché sceglierci</h3>
-            <ul>
-                <li><strong>Lievitazione 48h:</strong> Impasto ad altissima digeribilità, soffice e leggero.</li>
-                <li><strong>Ingredienti a Km 0:</strong> Farine selezionate, pomodoro 100% italiano e mozzarella fresca.</li>
-                <li><strong>Forno a Legna:</strong> Cottura tradizionale per il massimo del sapore e della croccantezza.</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="content-section">
-            <h2>Dove Siamo e Contattaci</h2>
-            <p><strong>Indirizzo:</strong> Via della Tradizione 12, Roma (RM)</p>
-
-            <div class="center-content">
-                <h3>Prenotazioni &amp; Asporto</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Canale</th>
-                            <th>Contatto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Telefono</td>
-                            <td><a href="tel:+39061234567">+39 06 123 4567</a></td>
-                        </tr>
-                        <tr>
-                            <td>WhatsApp</td>
-                            <td><a href="https://wa.me/39061234567">+39 06 123 4567</a></td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td><a href="mailto:info@ilfornodipietra.it">info@ilfornodipietra.it</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>Orari di Apertura</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Giorni</th>
-                            <th>Orario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lunedì - Giovedì</td>
-                            <td>19:00 – 23:00</td>
-                        </tr>
-                        <tr>
-                            <td>Venerdì - Domenica</td>
-                            <td>19:00 – 24:00</td>
-                        </tr>
-                        <tr>
-                            <td>Giorno di chiusura</td>
-                            <td>Martedì</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>Mappa</h3>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.886022833116!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f10dd4090b8480!2sColosseo!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit"
-                    height="450"
-                    loading="lazy">
-                </iframe>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <h3>Il Forno di Pietra</h3>
-        <p>📍 Via della Tradizione 12, Roma (RM) | 📞 Tel: +39 06 123 4567</p>
-        <p>&copy; 2026 Il Forno di Pietra - Tutti i diritti riservati.</p>
-    </footer>
-
-</body>
+	</body>
 </html>
