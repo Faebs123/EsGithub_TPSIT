@@ -1,107 +1,250 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="it">
 	<head>
-		<meta charset= "utf-8">
-		<title>Menù</title>
-		<link rel="stylesheet" href="./style.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Menù | Il Forno di Pietra</title>
+		<style>
+			:root {
+				--primary-color: #d35400;
+				--dark-color: #2c3e50;
+				--light-color: #f9f9f9;
+				--accent-color: #e67e22;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background-color: var(--light-color);
+				color: var(--dark-color);
+				line-height: 1.6;
+			}
+
+			header {
+				background-color: #fff;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+			}
+
+			.navbar {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+			}
+
+			.logo {
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: var(--primary-color);
+			}
+
+			.nav-links {
+				list-style: none;
+				display: flex;
+				gap: 20px;
+			}
+
+			.nav-links a {
+				text-decoration: none;
+				color: var(--dark-color);
+				font-weight: 600;
+				transition: color 0.3s;
+			}
+
+			.nav-links a:hover {
+				color: var(--primary-color);
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 40px auto;
+				padding: 0 20px;
+			}
+
+			.section-title {
+				text-align: center;
+				font-size: 2.2rem;
+				margin-bottom: 40px;
+				color: var(--dark-color);
+			}
+
+			.menu-table {
+				width: 100%;
+				border-collapse: collapse;
+				background: white;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+				margin-bottom: 60px;
+			}
+
+			.menu-table th, .menu-table td {
+				padding: 15px 20px;
+				text-align: left;
+				border-bottom: 1px solid #eee;
+			}
+
+			.menu-table th {
+				background-color: var(--primary-color);
+				color: white;
+				font-weight: 600;
+			}
+
+			.menu-table tr:hover {
+				background-color: #f1f1f1;
+			}
+
+			.menu-table img {
+				border-radius: 6px;
+				object-fit: cover;
+			}
+
+			.menu-table ul {
+				list-style-type: disc;
+				margin-left: 20px;
+			}
+
+			.price {
+				font-weight: bold;
+				color: var(--accent-color);
+			}
+
+			footer {
+				background-color: var(--dark-color);
+				color: white;
+				text-align: center;
+				padding: 40px 20px;
+			}
+
+			footer p {
+				margin-bottom: 10px;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<h1 text-align="center">Menù Forno di pietra</h1>
-		<table border="1" padding="20px">
-			<tr>
-				<th>Pizza</th>
-				<th>Ingredienti</th>
-				<th>Prezzo</th>
-				<th>Immagine</th>
-			</tr>
-			<tr>
-				<td>Margherita</td>
-				<td>
-					<ul>
-						<li>Pomodoro</li>
-						<li>Mozzarella</li>
-						<li>Basilico</li>
-					</ul>
-				</td>
-				<td>5.00 €</td>
-				<!-- Immagine inserita: ./imgs/Pizza margherita.PNG -->
-				<td><img src="./imgs/Pizza margherita.PNG" alt="Immagine pizza margherita" width="100"></td>
-			</tr>
-			<tr>
-				<td>Diavola</td>
-				<td>
-					<ul>
-						<li>Pomodoro</li>
-						<li>Mozzarella</li>
-						<li>Salame piccante</li>
-					</ul>
-				</td>
-				<td>6.50 €</td>
-				<!-- Immagine inserita: ./imgs/Diavola.PNG -->
-				<td><img src="./imgs/Diavola.PNG" alt="Immagine pizza diavola" width="100"></td>
-			</tr>
-			<tr>
-				<td>Marinara</td>
-				<td>
-					<ul>
-						<li>Pomodoro</li>
-						<li>Aglio</li>
-						<li>Origano</li>
-						<li>Olio d'oliva</li>
-					</ul>
-				</td>
-				<td>4.50 €</td>
-				<!-- Immagine inserita: ./imgs/Marinara.PNG -->
-				<td><img src="./imgs/Marinara.PNG" alt="Immagine pizza marinara" width="100"></td>
-			</tr>
-			<tr>
-				<td>Capricciosa</td>
-				<td>
-					<ul>
-						<li>Pomodoro</li>
-						<li>Mozzarella</li>
-						<li>Prosciutto cotto</li>
-						<li>Funghi</li>
-						<li>Carciofi</li>
-						<li>Olive</li>
-					</ul>
-				</td>
-				<td>7.50 €</td>
-				<!-- Immagine inserita: ./imgs/Capricciosa.PNG -->
-				<td><img src="./imgs/Capricciosa.PNG" alt="Immagine pizza capricciosa" width="100"></td>
-			</tr>
-			<tr>
-				<td>Quattro Formaggi</td>
-				<td>
-					<ul>
-						<li>Mozzarella</li>
-						<li>Gorgonzola</li>
-						<li>Fontina</li>
-						<li>Parmigiano Reggiano</li>
-					</ul>
-				</td>
-				<td>8.00 €</td>
-				<!-- Immagine inserita: ./imgs/4 formaggi.PNG -->
-				<td><img src="./imgs/4 formaggi.PNG" alt="Immagine pizza quattro formaggi" width="100"></td>
-			</tr>
-			<tr>
-				<td>La Forno di pietra</td>
-				<td>
-					<ul>
-						<li>Salsa brace</li>
-						<li>Mozzarella</li>
-						<li>Pomodori secchi</li>
-						<li>Salsiccia</li>
-						<li>Basilico</li>
-					</ul>
-				</td>
-				<td>8.50 €</td>
-				<!-- Immagine inserita: ./imgs/La forno.PNG -->
-				<td><img src="./imgs/La forno.PNG" alt="Immagine pizza La Forno di pietra" width="100"></td>
-			</tr>
-		</table>
-	</body>
 
+		<header>
+			<nav class="navbar">
+				<div class="logo">🍕 Il Forno di Pietra</div>
+				<ul class="nav-links">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./menu.html">Menu</a></li>
+					<li><a href="./chisiamo.html">Chi Siamo</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<h1 class="section-title">Menù Forno di Pietra</h1>
+			<table class="menu-table">
+				<thead>
+					<tr>
+						<th>Pizza</th>
+						<th>Ingredienti</th>
+						<th>Prezzo</th>
+						<th>Immagine</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Margherita</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Basilico</li>
+							</ul>
+						</td>
+						<td><span class="price">5.00 €</span></td>
+						<td><img src="./imgs/Pizza margherita.PNG" alt="Immagine pizza margherita" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Diavola</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Salame piccante</li>
+							</ul>
+						</td>
+						<td><span class="price">6.50 €</span></td>
+						<td><img src="./imgs/Diavola.PNG" alt="Immagine pizza diavola" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Marinara</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Aglio</li>
+								<li>Origano</li>
+								<li>Olio d'oliva</li>
+							</ul>
+						</td>
+						<td><span class="price">4.50 €</span></td>
+						<td><img src="./imgs/Marinara.PNG" alt="Immagine pizza marinara" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Capricciosa</strong></td>
+						<td>
+							<ul>
+								<li>Pomodoro</li>
+								<li>Mozzarella</li>
+								<li>Prosciutto cotto</li>
+								<li>Funghi</li>
+								<li>Carciofi</li>
+								<li>Olive</li>
+							</ul>
+						</td>
+						<td><span class="price">7.50 €</span></td>
+						<td><img src="./imgs/Capricciosa.PNG" alt="Immagine pizza capricciosa" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>Quattro Formaggi</strong></td>
+						<td>
+							<ul>
+								<li>Mozzarella</li>
+								<li>Gorgonzola</li>
+								<li>Fontina</li>
+								<li>Parmigiano Reggiano</li>
+							</ul>
+						</td>
+						<td><span class="price">8.00 €</span></td>
+						<td><img src="./imgs/4 formaggi.PNG" alt="Immagine pizza quattro formaggi" width="100"></td>
+					</tr>
+					<tr>
+						<td><strong>La Forno di pietra</strong></td>
+						<td>
+							<ul>
+								<li>Salsa brace</li>
+								<li>Mozzarella</li>
+								<li>Pomodori secchi</li>
+								<li>Salsiccia</li>
+								<li>Basilico</li>
+							</ul>
+						</td>
+						<td><span class="price">8.50 €</span></td>
+						<td><img src="./imgs/La forno.PNG" alt="Immagine pizza La Forno di pietra" width="100"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<footer id="contact">
+			<h3>Il Forno di Pietra</h3>
+			<p>📍 Via della Tradizione 12, Roma (RM) | 📞 Tel: +39 06 123 4567 </p>
+			<p>&copy; 2026 Il Forno di Pietra - Tutti i diritti riservati.</p>
+		</footer>
+
+	</body>
 </html>
