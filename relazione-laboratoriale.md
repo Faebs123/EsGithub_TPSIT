@@ -5,9 +5,9 @@
 - **Disciplina:** TPSIT
 - **Titolo:** Progettazione collaborativa di un sito web per una pizzeria
 - **Repository:** [Faebs123/EsGithub_TPSIT](https://github.com/Faebs123/EsGithub_TPSIT)
-- **Periodo ricostruito dalla cronologia:** 20 ottobre – 5 novembre 2026
-- **Componenti del gruppo:** Fabrizio (Faebs123), Christian Angione e Sciascia
-- **Tecnologie osservate:** HTML e CSS, immagini; Git e GitHub per la gestione del lavoro
+- **Periodo ricostruito dalla cronologia:** 20 ottobre – 9 novembre 2026
+- **Componenti del gruppo:** Fabrizio Pellegrini, Christian Angione e Francesco Sciascia
+- **Tecnologie osservate:** HTML e CSS, GitHub per la gestione del lavoro
 
 ## Obiettivo
 
@@ -27,7 +27,7 @@ Sono stati utilizzati file HTML per organizzare i contenuti delle pagine, fogli 
 6. **Organizzazione dello stile.** La cronologia registra il passaggio da stili incorporati nelle pagine a un foglio CSS esterno condiviso. Durante le modifiche sono emersi problemi di collegamento e di gestione del CSS: sono stati aggiornati i riferimenti al foglio di stile e alcune modifiche sono state annullate o corrette prima di proseguire con una nuova riorganizzazione.
 7. **Collaborazione tramite branch.** Il lavoro è stato sviluppato anche in `develop` e poi integrato in `main` attraverso più merge e pull request. Nei commit del 5 novembre si trovano nuove correzioni e riorganizzazioni del menu e della pagina “Chi siamo” sul branch `develop`.
 
-## Uso di Git e GitHub
+## Uso di GitHub
 
 La cronologia evidenzia diverse pratiche di collaborazione:
 
@@ -36,8 +36,6 @@ La cronologia evidenzia diverse pratiche di collaborazione:
 - i **merge** e le pull request hanno consentito di integrare nel branch principale le modifiche completate;
 - i messaggi e i commenti nei file sono stati usati per comunicare richieste e feedback tra i componenti;
 - alcuni interventi successivi hanno corretto errori e riorganizzato parti già realizzate, mostrando l’importanza di controllare le modifiche prima dell’integrazione.
-
-Alla data dell’ultimo commit consultato, il branch `develop` risultava più aggiornato di `main`: le revisioni registrate il 5 novembre non risultano ancora integrate nel branch principale nella cronologia esaminata.
 
 ## Risultato
 
@@ -57,4 +55,3 @@ L’attività ha unito la realizzazione di un piccolo sito web con l’apprendim
 
 ---
 
-*Nota: la relazione è stata ricostruita dai messaggi dei commit visibili nei branch `main` e `develop`; i dettagli non esplicitati nella cronologia, come le prove di funzionamento effettivamente svolte, non sono stati dati per certi.*
